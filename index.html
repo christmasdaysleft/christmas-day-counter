@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christmas Countdown Widget &amp; Printable Paper Chain – Free</title>
+<meta name="description" content="Live Christmas countdown plus free tools: build a Christmas countdown widget for your website or blog, and print a paper-chain countdown for kids with one link for every sleep until Christmas.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Christmas Countdown Widget &amp; Printable Paper Chain – Free">
+<meta property="og:description" content="Free Christmas countdown widget for your site and a printable paper chain for kids.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Christmas Countdown Widget Maker",
+      "applicationCategory":"UtilitiesApplication",
+      "operatingSystem":"Browser",
+      "inLanguage":"en",
+      "description":"Live Christmas countdown, a free embeddable Christmas countdown widget generator and a printable paper-chain countdown for kids.",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"How do I add a Christmas countdown to my website?","acceptedAnswer":{"@type":"Answer","text":"Choose a title, theme and size in the widget maker, copy the embed code and paste it into an HTML block on your website or blog. The countdown runs on its own and updates every second."}},
+        {"@type":"Question","name":"Is the Christmas countdown widget free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The widget is free for personal blogs, school sites, shops and community pages. It is a small piece of HTML and JavaScript with no tracking."}},
+        {"@type":"Question","name":"Does the widget switch to next Christmas automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. It shows a Merry Christmas message on December 25 and starts counting down to the following Christmas from December 26."}},
+        {"@type":"Question","name":"How many links should my paper chain have?","acceptedAnswer":{"@type":"Answer","text":"One link for every sleep until Christmas. The printable chain fills in today’s number automatically, or you can choose a different number, for example 24 for a December-only chain."}},
+        {"@type":"Question","name":"What time zone does the countdown use?","acceptedAnswer":{"@type":"Answer","text":"Both the page and the widget count down to midnight on December 25 in the visitor’s own time zone."}},
+        {"@type":"Question","name":"Where did the Advent wreath come from?","acceptedAnswer":{"@type":"Answer","text":"The Advent wreath is credited to Johann Hinrich Wichern, a Lutheran pastor in Hamburg, who used a wheel with candles in 1839 to help children count the days to Christmas."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="hd">
+  <div class="wrap hd-in">
+    <a href="#" class="logo" aria-label="Christmas countdown home"><span class="logo-badge">25</span><span>The Christmas <i>Countdown</i></span></a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.nav').classList.toggle('open')"><span></span><span></span></button>
+    <nav class="nav">
+      <a href="#" class="cur">Countdown</a>
+      <a href="#widget">Widget</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <p class="est">✦ Est. every December ✦</p>
+    <h1>Christmas is <em>coming</em></h1>
+    <p class="hero-sub" id="hero-sub">Only a few more sleeps until Friday, 25 December 2026</p>
+
+    <div class="tickets" aria-live="polite">
+      <div class="ticket"><b id="t-d">50</b><span>Days</span></div>
+      <div class="ticket"><b id="t-h">00</b><span>Hours</span></div>
+      <div class="ticket"><b id="t-m">00</b><span>Minutes</span></div>
+      <div class="ticket"><b id="t-s">00</b><span>Seconds</span></div>
+    </div>
+    <p class="merry" id="merry" hidden>✦ Merry Christmas ✦</p>
+
+    <p class="hero-p">Make the wait part of the fun: put a live countdown on your own website, print a paper chain for the kids, or check the daily number on <a href="https://christmasdaysleft.com/">christmasdaysleft.com</a>.</p>
+    <div class="hero-btns">
+      <a href="#widget" class="btn gold">Make a countdown widget</a>
+      <a href="#chain" class="btn line">Print a paper chain</a>
+    </div>
+  </div>
+</section>
+
+<main>
+  <!-- ===== WIDGET MAKER ===== -->
+  <section class="sec wrap" id="widget">
+    <div class="sec-head center"><p class="kick">Free tool</p><h2>Christmas countdown widget maker</h2>
+    <p>Add a live Christmas countdown to your blog, school website or shop in under a minute. Pick a style, copy the code, paste it into an HTML block – done.</p></div>
+
+    <div class="maker">
+      <div class="opts">
+        <label class="fld"><span>Title</span><input type="text" id="w-title" value="Christmas is coming!" maxlength="40"></label>
+        <div class="fld"><span>Theme</span>
+          <div class="themes" id="w-theme">
+            <button type="button" data-t="classic" class="on" aria-label="Classic red"><i style="background:#a4161a"></i>Classic</button>
+            <button type="button" data-t="forest" aria-label="Forest green"><i style="background:#1b4332"></i>Forest</button>
+            <button type="button" data-t="snowy" aria-label="Snowy blue"><i style="background:#e8f1f8;border:1px solid #c7d7e6"></i>Snowy</button>
+            <button type="button" data-t="gold" aria-label="Black and gold"><i style="background:#1b1b1b"></i>Gold</button>
+          </div>
+        </div>
+        <div class="fld"><span>Size</span>
+          <div class="seg" id="w-size"><button type="button" data-s="small" class="on">Small</button><button type="button" data-s="large">Large</button></div>
+        </div>
+        <label class="tgl"><input type="checkbox" id="w-sec" checked><b></b>Show seconds</label>
+        <label class="tgl"><input type="checkbox" id="w-sleeps"><b></b>Show “sleeps” instead of d/h/m</label>
+      </div>
+
+      <div class="out">
+        <div class="preview"><span class="pv-label">Live preview</span><iframe id="w-frame" title="Widget preview" loading="lazy"></iframe></div>
+        <label class="code"><span>Embed code</span><textarea id="w-code" readonly rows="6"></textarea></label>
+        <button type="button" class="btn gold full" id="w-copy">Copy embed code</button>
+        <p class="tiny">Paste into any page that accepts HTML (WordPress “Custom HTML” block, Blogger HTML gadget, Wix embed and similar). The small credit link uses rel="nofollow".</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAPER CHAIN ===== -->
+  <section class="chain-sec" id="chain">
+    <div class="wrap chain-grid">
+      <div>
+        <p class="kick light">For kids</p>
+        <h2>Printable paper-chain countdown</h2>
+        <p>The classic family countdown: print the strips, cut them out and loop them into a chain. Each night before bed, tear off one link. When the last one is gone, it’s Christmas morning!</p>
+        <div class="chain-ctrl">
+          <label for="c-n">Number of links</label>
+          <div class="c-row">
+            <input type="number" id="c-n" min="1" max="60" value="24">
+            <button type="button" class="btn line light" id="c-today">Use today’s sleeps</button>
+          </div>
+          <label class="tgl light"><input type="checkbox" id="c-msg" checked><b></b>Add a little activity to every link</label>
+          <button type="button" class="btn gold" id="c-print">🖨 Print my paper chain</button>
+        </div>
+      </div>
+      <div class="chain-prev" aria-label="Paper chain preview"><div class="links" id="c-prev"></div><p class="tiny light" id="c-info">Preview of the first links</p></div>
+    </div>
+  </section>
+
+  <!-- ===== WAYS ===== -->
+  <section class="sec wrap">
+    <div class="sec-head center"><p class="kick">Ideas</p><h2>Eight ways to count down to Christmas</h2></div>
+    <div class="ways">
+      <article><span>⛓️</span><h3>Paper chain</h3><p>One link for every sleep – simple, cheap and loved by small children.</p></article>
+      <article><span>🚪</span><h3>Advent calendar</h3><p>Twenty-four doors from December 1, filled with chocolate, toys or notes.</p></article>
+      <article><span>📚</span><h3>Book-a-day</h3><p>Wrap 24 books – old favourites count – and unwrap one each evening.</p></article>
+      <article><span>💛</span><h3>Kindness calendar</h3><p>A small good deed every day: a note to a neighbour, a donation, a phone call.</p></article>
+      <article><span>🕯️</span><h3>Advent wreath</h3><p>Four candles, one lit on each Sunday in Advent.</p></article>
+      <article><span>🎬</span><h3>Film countdown</h3><p>A Christmas movie every weekend, building up to the favourite on Christmas Eve.</p></article>
+      <article><span>🍪</span><h3>Baking days</h3><p>Pick a few dates for cookies, gingerbread and mince pies.</p></article>
+      <article><span>🖥️</span><h3>Website widget</h3><p>Show the countdown to every visitor with the free widget above.</p></article>
+    </div>
+  </section>
+
+  <!-- ===== HISTORY ===== -->
+  <section class="sec wrap">
+    <div class="sec-head center"><p class="kick">A little history</p><h2>How we learned to count down to Christmas</h2></div>
+    <ol class="history">
+      <li><b>1839</b><div><h3>The first Advent wreath</h3><p>Hamburg pastor Johann Hinrich Wichern put candles on a cart wheel so the children in his care could count the days to Christmas.</p></div></li>
+      <li><b>1843</b><div><h3>Christmas cards arrive</h3><p>The first commercial Christmas card was sent in England, and the season of writing and posting began.</p></div></li>
+      <li><b>1908</b><div><h3>Printed Advent calendars</h3><p>German publisher Gerhard Lang is credited with one of the first printed Advent calendars.</p></div></li>
+      <li><b>1950s</b><div><h3>Calendars go mainstream</h3><p>After the Second World War, mass-produced Advent calendars spread across Europe and North America.</p></div></li>
+      <li><b>Today</b><div><h3>Countdowns everywhere</h3><p>From phone widgets to paper chains, counting the sleeps is a family tradition around the world.</p></div></li>
+    </ol>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="sec wrap">
+    <div class="sec-head center"><p class="kick">FAQ</p><h2>Countdown questions</h2></div>
+    <div class="faq">
+      <details open><summary>How do I add a Christmas countdown to my website?</summary><p>Choose a title, theme and size in the widget maker, copy the embed code and paste it into an HTML block on your website or blog. The countdown runs on its own and updates every second.</p></details>
+      <details><summary>Is the Christmas countdown widget free?</summary><p>Yes. The widget is free for personal blogs, school sites, shops and community pages. It is a small piece of HTML and JavaScript with no tracking.</p></details>
+      <details><summary>Does the widget switch to next Christmas automatically?</summary><p>Yes. It shows a Merry Christmas message on December 25 and starts counting down to the following Christmas from December 26.</p></details>
+      <details><summary>How many links should my paper chain have?</summary><p>One link for every sleep until Christmas. The printable chain fills in today’s number automatically, or you can choose a different number, for example 24 for a December-only chain.</p></details>
+      <details><summary>What time zone does the countdown use?</summary><p>Both the page and the widget count down to midnight on December 25 in the visitor’s own time zone.</p></details>
+      <details><summary>Where did the Advent wreath come from?</summary><p>The Advent wreath is credited to Johann Hinrich Wichern, a Lutheran pastor in Hamburg, who used a wheel with candles in 1839 to help children count the days to Christmas.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="ft" id="contact">
+  <div class="wrap ft-in">
+    <div>
+      <span class="logo light"><span class="logo-badge">25</span><span>The Christmas <i>Countdown</i></span></span>
+      <p>Free countdown tools for families, schools and websites.</p>
+    </div>
+    <nav>
+      <a href="#">Countdown</a>
+      <a href="#widget">Widget</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+    </nav>
+  </div>
+  <p class="wrap ft-copy">© <span id="yr"></span> The Christmas Countdown · Season’s greetings.</p>
+</footer>
+
+<div id="print-area" aria-hidden="true"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function pad(n){return String(n).padStart(2,'0');}
+  function dOnly(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate());}
+  function xYear(n){return (n.getMonth()===11&&n.getDate()>25)?n.getFullYear()+1:n.getFullYear();}
+  function sleepsLeft(){ var n=new Date(), t=new Date(xYear(n),11,25); return (n.getMonth()===11&&n.getDate()===25)?0:Math.round((t-dOnly(n))/864e5); }
+  function toast(t){var e=$('toast');e.textContent=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove('show');},1800);}
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+  /* ---------- Hero countdown ---------- */
+  function tick(){
+    var n=new Date(), y=xYear(n), t=new Date(y,11,25), isX=n.getMonth()===11&&n.getDate()===25;
+    var ms=Math.max(0,t-n), s=sleepsLeft();
+    $('t-d').textContent=Math.floor(ms/864e5); $('t-h').textContent=pad(Math.floor(ms%864e5/36e5)); $('t-m').textContent=pad(Math.floor(ms%36e5/6e4)); $('t-s').textContent=pad(Math.floor(ms%6e4/1e3));
+    document.querySelector('.tickets').hidden=isX; $('merry').hidden=!isX;
+    $('hero-sub').textContent=isX?'It’s Christmas Day – enjoy every minute!':(s===1?'Just one more sleep until ':'Only '+s+' more sleeps until ')+DAYS[t.getDay()]+', 25 December '+y;
+  }
+
+  /* ---------- Widget maker ---------- */
+  var THEMES={classic:{bg:'#a4161a',fg:'#fff8ec',ac:'#f2d27a'},forest:{bg:'#1b4332',fg:'#ffffff',ac:'#f2d27a'},snowy:{bg:'#e8f1f8',fg:'#16324f',ac:'#c0392b'},gold:{bg:'#1b1b1b',fg:'#f5ebdc',ac:'#d4af37'}};
+  var theme='classic', size='small';
+  function snippet(){
+    var th=THEMES[theme], big=size==='large', id='xcd'+Math.random().toString(36).slice(2,7);
+    var sec=$('w-sec').checked, sl=$('w-sleeps').checked;
+    var title=esc($('w-title').value.trim()||'Christmas is coming!');
+    var html='<div id="'+id+'" style="font-family:Georgia,serif;background:'+th.bg+';color:'+th.fg+';border-radius:14px;padding:'+(big?'22px':'14px')+';text-align:center;max-width:'+(big?'420px':'280px')+';margin:0 auto;box-shadow:0 6px 18px rgba(0,0,0,.18)">'
+      +'<div style="font-size:'+(big?'20px':'15px')+';font-weight:bold;margin-bottom:6px">'+title+'</div>'
+      +'<div data-cd style="font-size:'+(big?'34px':'24px')+';font-weight:bold;color:'+th.ac+';letter-spacing:1px">&hellip;</div>'
+      +'<div data-sub style="font-size:12px;opacity:.85;margin-top:4px">until Christmas</div>'
+      +'<div style="font-size:10px;opacity:.7;margin-top:8px"><a href="https://christmasdaysleft.com/" rel="nofollow noopener" target="_blank" style="color:inherit">christmasdaysleft.com</a></div></div>\n'
+      +'<script>(function(){var w=document.getElementById("'+id+'"),el=w.querySelector("[data-cd]"),sub=w.querySelector("[data-sub]");'
+      +'function p(n){return(n<10?"0":"")+n}function t(){var n=new Date(),x=n.getMonth()==11&&n.getDate()==25;'
+      +'if(x){el.textContent="Merry Christmas!";sub.textContent="";return}'
+      +'var y=n.getMonth()==11&&n.getDate()>25?n.getFullYear()+1:n.getFullYear(),c=new Date(y,11,25),ms=c-n;'
+      +(sl?'var s=Math.round((c-new Date(n.getFullYear(),n.getMonth(),n.getDate()))/864e5);el.textContent=s+(s==1?" sleep":" sleeps");'
+          :'el.textContent=Math.floor(ms/864e5)+"d "+p(Math.floor(ms%864e5/36e5))+"h "+p(Math.floor(ms%36e5/6e4))+"m"'+(sec?'+" "+p(Math.floor(ms%6e4/1e3))+"s"':'')+';')
+      +'}t();setInterval(t,1000)})();<\/script>';
+    return html;
+  }
+  function renderWidget(){
+    var code=snippet();
+    $('w-code').value=code;
+    $('w-frame').srcdoc='<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0;padding:16px;display:grid;place-items:center;min-height:100vh;box-sizing:border-box;background:transparent}</style></head><body>'+code+'</body></html>';
+  }
+  document.querySelectorAll('#w-theme button').forEach(function(b){ b.addEventListener('click',function(){ theme=b.dataset.t; document.querySelectorAll('#w-theme button').forEach(function(x){x.classList.toggle('on',x===b);}); renderWidget(); }); });
+  document.querySelectorAll('#w-size button').forEach(function(b){ b.addEventListener('click',function(){ size=b.dataset.s; document.querySelectorAll('#w-size button').forEach(function(x){x.classList.toggle('on',x===b);}); renderWidget(); }); });
+  ['w-title','w-sec','w-sleeps'].forEach(function(id){ $(id).addEventListener('input',renderWidget); $(id).addEventListener('change',renderWidget); });
+  $('w-copy').addEventListener('click',function(){
+    var v=$('w-code').value;
+    if(navigator.clipboard&&window.isSecureContext){ navigator.clipboard.writeText(v).then(function(){toast('Embed code copied');}); return; }
+    $('w-code').select(); try{document.execCommand('copy');toast('Embed code copied');}catch(e){}
+  });
+
+  /* ---------- Paper chain ---------- */
+  var ACTS=['Sing a carol','Make a card for someone','Watch a Christmas film','Bake cookies','Write to Santa','Go and look at the lights','Read a Christmas story','Make a paper snowflake','Have hot chocolate','Call a grandparent','Decorate the tree','Draw a reindeer','Wrap a present','Do a kind deed','Play a board game','Make a paper star','Dance to a Christmas song','Count the stars tonight','Learn Merry Christmas in a new language','Make a gingerbread person','Donate a toy','Have a pyjama morning','Tidy your room for Santa','Hang your stocking'];
+  function chainHTML(n,acts,cls){
+    var out=''; for(var i=n;i>=1;i--){ out+='<div class="'+cls+(i%2?' r':' g')+'"><b>'+i+'</b><span>'+(i===1?'Christmas Eve – last link!':(acts?ACTS[(n-i)%ACTS.length]:(i+' sleeps to go')))+'</span></div>'; } return out;
+  }
+  function chainPrev(){
+    var n=Math.max(1,Math.min(60,parseInt($('c-n').value,10)||24));
+    $('c-prev').innerHTML=chainHTML(n,$('c-msg').checked,'lk').split('</div>').slice(0,6).join('</div>')+'</div>';
+    $('c-info').textContent=n+(n===1?' link':' links')+' in total – preview of the first '+Math.min(6,n);
+    return n;
+  }
+  $('c-n').addEventListener('input',chainPrev); $('c-msg').addEventListener('change',chainPrev);
+  $('c-today').addEventListener('click',function(){ var s=sleepsLeft(); $('c-n').value=Math.max(1,Math.min(60,s)); chainPrev(); if(s>60) toast('Over 60 sleeps – capped at 60 links'); });
+  $('c-print').addEventListener('click',function(){
+    var n=chainPrev();
+    $('print-area').innerHTML='<h1>My Christmas countdown chain</h1><p>Cut out each strip, loop them into a chain and tear one off every night.</p><div class="pstrips">'+chainHTML(n,$('c-msg').checked,'ps')+'</div>';
+    window.print();
+  });
+
+  document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.nav').classList.remove('open');});});
+  $('yr').textContent=new Date().getFullYear();
+  tick(); setInterval(tick,1000); renderWidget(); chainPrev();
+})();
+</script>
+</body>
+</html>
